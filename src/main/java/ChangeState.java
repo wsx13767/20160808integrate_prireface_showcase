@@ -14,7 +14,7 @@ import dao.BuildOrderDAO;
 /**
  * Servlet implementation class accountInfo
  */
-@WebServlet("/orderManagenmentMore")
+@WebServlet("/ChangeState")
 public class ChangeState extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

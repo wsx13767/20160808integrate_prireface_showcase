@@ -13,7 +13,7 @@ import dao.JoinOrderDAO;
 /**
  * Servlet implementation class accountInfo
  */
-@WebServlet("/orderSearchMoreInfo")
+@WebServlet("/ChangeGet")
 public class ChangeGet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

@@ -14,7 +14,7 @@ import model.UserData;
 /**
  * Servlet implementation class accountInfo
  */
-@WebServlet("/accountInfo")
+@WebServlet("/ChangeEmail")
 public class ChangeEmail extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
