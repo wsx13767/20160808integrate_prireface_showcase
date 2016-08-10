@@ -1,3 +1,7 @@
+<%@taglib uri="http://java.sun.com/jsf/core" prefix="f" %>
+<%@taglib uri="http://java.sun.com/jsf/html" prefix="h" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ page pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,23 +28,7 @@
             	<div class=" contact_right">
             		<h3>連絡我們</h3>
             		<div class="contact-form">
-							<form method="post" action="contact-post.jsp">
-								<input type="text" class="textbox" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-								<input type="text" class="textbox" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-								<textarea value="Message" onfocus="this.value= '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-								<input type="submit" value="Send">
-								<div class="clearfix"> </div>
-							</form>
-							<address class="address">
-                    <p>9870 St Vincent Place, <br>Glasgow, DC 45 Fr 45.</p>
-                    <dl>
-                        <dt> </dt>
-                        <dd>Freephone:<span> +1 800 254 2478</span></dd>
-                        <dd>Telephone:<span> +1 800 547 5478</span></dd>
-                        <dd>FAX: <span>+1 800 658 5784</span></dd>
-                        <dd>E-mail:&nbsp; <a href="mailto@vintage.com">info(at)bigshop.com</a></dd>
-                    </dl>
-                </address>
+							 <h:outputText value="Simple:" /> 
 						</div>
             	</div>
             </div>
