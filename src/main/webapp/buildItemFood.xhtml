@@ -5,17 +5,20 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui">
-	<h:head>
-		<title>buildItemFood</title>
-	</h:head>
-	<body>
-		<f:view>
-			<h:form>
-				<p:inputText value="#{buildOrderServletBean.food}"/>
-				<p:commandButton value="push" update="display"></p:commandButton>
-				<h:outputText  value="#{buildOrderServletBean.food}"/>
-				#{buildOrderServletBean.food}
-			</h:form>
-		</f:view>
-	</body>
+<h:head>
+	<title>buildItemFood</title>
+</h:head>
+<body>
+	<f:view>
+		<h:form>
+		<h:panelGrid columns="2" cellpadding="3">
+				<p:outputLabel value="title:" />
+				<p:inputText id="title" value="#{buildOrderBean.title}" ></p:inputText>
+				<p:outputLabel value="deadline:"/>
+				<p:inputText id="deadline" value="#{buildOrderBean.deadline}"></p:inputText>
+				<p:commandButton value="Submit" />
+	</h:panelGrid>
+		</h:form>
+	</f:view>
+</body>
 </html>
