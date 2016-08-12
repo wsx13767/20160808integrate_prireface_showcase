@@ -11,12 +11,43 @@
 <body>
 	<f:view>
 		<h:form>
-		<h:panelGrid columns="2" cellpadding="3">
-				<p:outputLabel value="title:" />
-				<p:inputText id="title" value="#{buildOrderBean.title}" ></p:inputText>
-				<p:outputLabel value="deadline:"/>
-				<p:inputText id="deadline" value="#{buildOrderBean.deadline}"></p:inputText>
-				<p:commandButton value="Submit" />
+		<h:panelGrid columns="3" cellpadding="3">
+				<h:outputLabel value="title:" />
+				<h:inputText id="title" value="#{buildOrderBean.title}" />
+				<h:outputText value="#{buildOrderBean.title}" />
+				
+				<h:outputLabel value="deadline:"/>
+				<h:inputText id="deadline" value="#{buildOrderBean.deadline}"/>
+				<h:outputText value="#{buildOrderBean.deadline}"/>
+				
+				<h:outputLabel value="itemNeedCounter:"/>
+				<h:inputText id="itemNeedCounter" value="#{buildOrderBean.itemNeedCounter}"/>
+				<h:outputText value="#{buildOrderBean.itemNeedCounter}"/>
+				
+				<h:outputLabel value="itemInformation:"/>				
+				<h:inputText id="itemInformation" value="#{buildOrderBean.itemInformation}"/>
+				<h:outputText value="#{buildOrderBean.itemInformation}"/>
+				
+				<h:outputLabel value="itemName:"/>				
+				<h:inputText id="itemName" value="#{buildOrderBean.itemName}"/>
+				<h:outputText value="#{buildOrderBean.itemName}"/>
+				
+				<h:outputLabel value="money:"/>				
+				<h:inputText id="money" value="#{buildOrderBean.money}"/>
+				<h:outputText value="#{buildOrderBean.money}"/>
+				
+				<h:outputLabel value="counter:"/>				
+				<h:inputText id="counter" value="#{buildOrderBean.counter}"/>
+				<h:outputText value="#{buildOrderBean.counter}"/>
+				
+				<h:outputLabel value="picture:"/>				
+				<h:inputText id="picture" value="#{buildOrderBean.picture}"/>
+				<h:outputText value="#{buildOrderBean.picture}"/>
+				
+				<h:outputLabel value="userID:"/>				
+				<h:inputText id="userID" value="#{buildOrderBean.userID}"/>
+				<h:outputText value="#{buildOrderBean.userID}"/>
+				<h:commandButton value="Submit"></h:commandButton>
 	</h:panelGrid>
 		</h:form>
 	</f:view>
