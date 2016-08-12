@@ -13,41 +13,41 @@
 		<h:form>
 		<h:panelGrid columns="3" cellpadding="3">
 				<h:outputLabel value="title:" />
-				<h:inputText id="title" value="#{buildOrderBean.title}" />
-				<h:outputText value="#{buildOrderBean.title}" />
+				<h:inputText id="title" value="#{buildOrderBean.data.title}" />
+				<h:outputText value="#{buildOrderBean.data.title}" />
 				
 				<h:outputLabel value="deadline:"/>
-				<h:inputText id="deadline" value="#{buildOrderBean.deadline}"/>
-				<h:outputText value="#{buildOrderBean.deadline}"/>
+				<h:inputText id="deadline" value="#{buildOrderBean.data.deadline}"/>
+				<h:outputText value="#{buildOrderBean.data.deadline}"/>
 				
 				<h:outputLabel value="itemNeedCounter:"/>
-				<h:inputText id="itemNeedCounter" value="#{buildOrderBean.itemNeedCounter}"/>
-				<h:outputText value="#{buildOrderBean.itemNeedCounter}"/>
+				<h:inputText id="itemNeedCounter" value="#{buildOrderBean.data.itemNeedCounter}"/>
+				<h:outputText value="#{buildOrderBean.data.itemNeedCounter}"/>
 				
 				<h:outputLabel value="itemInformation:"/>				
-				<h:inputText id="itemInformation" value="#{buildOrderBean.itemInformation}"/>
-				<h:outputText value="#{buildOrderBean.itemInformation}"/>
+				<h:inputText id="itemInformation" value="#{buildOrderBean.data.itemInformation}"/>
+				<h:outputText value="#{buildOrderBean.data.itemInformation}"/>
 				
 				<h:outputLabel value="itemName:"/>				
-				<h:inputText id="itemName" value="#{buildOrderBean.itemName}"/>
-				<h:outputText value="#{buildOrderBean.itemName}"/>
+				<h:inputText id="itemName" value="#{buildOrderBean.data.itemName}"/>
+				<h:outputText value="#{buildOrderBean.data.itemName}"/>
 				
 				<h:outputLabel value="money:"/>				
-				<h:inputText id="money" value="#{buildOrderBean.money}"/>
-				<h:outputText value="#{buildOrderBean.money}"/>
+				<h:inputText id="money" value="#{buildOrderBean.data.money}"/>
+				<h:outputText value="#{buildOrderBean.data.money}"/>
 				
 				<h:outputLabel value="counter:"/>				
-				<h:inputText id="counter" value="#{buildOrderBean.counter}"/>
-				<h:outputText value="#{buildOrderBean.counter}"/>
+				<h:inputText id="counter" value="#{buildOrderBean.data.counter}"/>
+				<h:outputText value="#{buildOrderBean.data.counter}"/>
 				
 				<h:outputLabel value="picture:"/>				
-				<h:inputText id="picture" value="#{buildOrderBean.picture}"/>
-				<h:outputText value="#{buildOrderBean.picture}"/>
+				<h:inputText id="picture" value="#{buildOrderBean.data.picture}"/>
+				<h:outputText value="#{buildOrderBean.data.picture}"/>
 				
 				<h:outputLabel value="userID:"/>				
-				<h:inputText id="userID" value="#{buildOrderBean.userID}"/>
-				<h:outputText value="#{buildOrderBean.userID}"/>
-				<h:commandButton value="Submit"></h:commandButton>
+				<h:inputText id="userID" value="#{buildOrderBean.data.userID}"/>
+				<h:outputText value="#{buildOrderBean.data.userID}"/>
+				<h:commandButton value="Submit" actionListener="#{buildOrderBean.add}"></h:commandButton>
 	</h:panelGrid>
 		</h:form>
 	</f:view>
