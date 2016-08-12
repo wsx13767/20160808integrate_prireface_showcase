@@ -14,7 +14,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
     <welcome-file>default.jsp</welcome-file>
     
   </welcome-file-list>
-  <!--     -->
+  <!--    
   <servlet>
     <servlet-name>ChangePassword</servlet-name>
     <servlet-class>ChangePassword</servlet-class>
@@ -63,7 +63,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
     <servlet-name>ChangeState</servlet-name>
     <url-pattern>/ChangeState</url-pattern>
   </servlet-mapping>
-   
+    -->
   <context-param>
     <param-name>javax.faces.PROJECT_STAGE</param-name>    
     <param-value>Development</param-value>
@@ -75,20 +75,24 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
     	<load-on-startup>0</load-on-startup>
     	<async-supported>true</async-supported>
     </servlet>
-<!--     <servlet-mapping> -->
-<!--     	<servlet-name>Faces Servlet</servlet-name> -->
-<!--     	<url-pattern>/faces/*</url-pattern> -->
-<!--     </servlet-mapping> -->
     <servlet-mapping>
+    	<servlet-name>Faces Servlet</servlet-name>
+    	<url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+ <!--    <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.jsf</url-pattern>
     </servlet-mapping>
-    <!--  
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    
 	<servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.jsp</url-pattern>
-    </servlet-mapping>
--->
+    </servlet-mapping> -->
+
   <!-- 
     <servlet>
         <servlet-name>Push Servlet</servlet-name>
