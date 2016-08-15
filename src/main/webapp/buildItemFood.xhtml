@@ -11,7 +11,7 @@
 <ui:include src="includeFile/top.xhtml" />
 </ui:insert>
 </h:head>
-<body>
+<body onload="loadImageFile();">
 <ui:insert>
 <ui:include src="includeFile/header.xhtml" />
 </ui:insert>
@@ -73,7 +73,7 @@ height:250px;
 resize: none;
 }
 </style>	
-<script>
+<!-- <script>
 $(function(){
 	var foodcount = 2;
 	$('#food_add').click(function(){
@@ -82,13 +82,13 @@ $(function(){
 		       	 return false;
 		 }
 		 $('#itemrow').append('<tr>'+
-					'<td><h4><input type="text" placeholder="食品名稱" name="food_itemName_name'+foodcount+'" form="food_form" minlength="2" maxlength="20" required="required"/></h4></td>'+
-					'<td><h4><input type="number"  placeholder="價錢" min="10" max="9999" name="food_money_name'+foodcount+'" form="food_form" required="required" /></h4></td>'+
+					'<td><h4><input type="text" placeholder="食品名稱" name="food_itemName_name'+foodcount+'"  minlength="2" maxlength="20" required="required"/></h4></td>'+
+					'<td><h4><input type="number"  placeholder="價錢" min="10" max="9999" name="food_money_name'+foodcount+'" /></h4></td>'+
 					'</tr>');
 		 		foodcount++;
 	});
-});
-</script>		
+}); 
+</script>	-->	
 	<!-- 建立訂單頁面 -->
 	<div class="container">
 		<div class="main"> 
@@ -98,7 +98,7 @@ $(function(){
             	<h:form>
 	            		<div class="row">
 							<div class="col-md-9"><h1>
-								標題：<h:inputText name="food_title_name" class="food_title" />
+								標題：<h:inputText name="food_title_name" class="food_title" value="#{buildOrderBean.data.title}"/>
 							</h1></div>
 							<div class="col-md-3"><h1>
 							</h1></div>
@@ -106,15 +106,15 @@ $(function(){
 							<tr>
 								<td width="350px" rowspan="3">
 									<img width="300px" src="images/cloudupicon.png" class="uploadPreview" alt="Image preview"/>
-									<h:inputText id="uploadImage" type="file" name="food_picture_name" onchange="loadImageFile();" />
+									<p:fileUpload id="uploadImage" mode="simple" name="food_picture_name" onchange="loadImageFile();" />
 								</td>
 								<td style="width:600px; border-bottom:1px solid rgba(85, 85, 85, 0.15);"><h2>
-									團購最大目標：<h:inputText id="number_max"  name="food_itemNeedCounter_name" class="num" />
+									團購最大目標：<p:inputNumber id="number_max"  name="food_itemNeedCounter_name" class="num" />
 								</h2></td>
 							</tr>
 							<tr>
 								<td style="width:600px; border-bottom:1px solid rgba(85, 85, 85, 0.15);"><h2>
-									團購最低需求：<h:inputText name="food_counter_name"  id="number_min" class="num"   min="10" />
+									團購最低需求：<p:inputNumber name="food_counter_name"  id="number_min" class="num"   min="10" />
 								</h2></td>
 							</tr>
 							<tr>
@@ -128,7 +128,7 @@ $(function(){
 							</table>
 						</div>
 						<h1>商品介紹</h1>
-						<h4><h:inputTextarea id="textarea"  placeholder="商品敘述" name="food_itemInformation_name" minlength="10" /></h4>
+						<h4><h:inputTextarea id="textarea"  name="food_itemInformation_name" rows="6" cols="33" /></h4>
 						<h1>商品項目<button type="button" class="btn btn-success" id="food_add">增加商品</button></h1>
 						<table id="itemrow" class="table table-hover">
 						<tr >
