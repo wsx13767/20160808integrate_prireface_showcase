@@ -10,9 +10,9 @@ public class BuildOrderBean {
 	
 	private BuildOrderDto data = new BuildOrderDto();
 	
-	public int add() {
+	public void add() {
 		System.out.println("add");
-		int n = 0;
+		/*int n = 0;*/
 		try {
 			// 抓取食品訂單內容宣告
 			String title = this.data.getTitle();
@@ -38,25 +38,25 @@ public class BuildOrderBean {
 			// 只有1樣商品
 			if (itemName2 == null && itemName3 == null && itemName4 == null) {
 
-				n = new BuildItemDAO().BuildOrder(title, itemInformation, deadline, itemName, itemNeedCounter, money,
+				/*n =*/ new BuildItemDAO().BuildOrder(title, itemInformation, deadline, itemName, itemNeedCounter, money,
 						counter, userID, picture);
 
 				// 兩樣商品
 			} else if (itemName3 == null && itemName4 == null) {
 
-				n = new BuildItemDAO().BuildOrder2(title, itemInformation, deadline, itemName, itemNeedCounter, money,
+				/*n =*/ new BuildItemDAO().BuildOrder2(title, itemInformation, deadline, itemName, itemNeedCounter, money,
 						counter, userID, itemName2, money2, picture);
 
 				// 三樣商品
 			} else if (itemName4 == null) {
 
-				n = new BuildItemDAO().BuildOrder3(title, itemInformation, deadline, itemName, itemNeedCounter, money,
+				/*n =*/ new BuildItemDAO().BuildOrder3(title, itemInformation, deadline, itemName, itemNeedCounter, money,
 						counter, userID, itemName2, money2, itemName3, money3, picture);
 
 				// 四樣商品
 			} else {
 
-				n = new BuildItemDAO().BuildOrder4(title, itemInformation, deadline, itemName, itemNeedCounter, money,
+				/*n =*/ new BuildItemDAO().BuildOrder4(title, itemInformation, deadline, itemName, itemNeedCounter, money,
 						counter, userID, itemName2, money2, itemName3, money3, itemName4, money4, picture);
 
 			}
@@ -64,7 +64,8 @@ public class BuildOrderBean {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return n;
+	/*	return n;*/
+		return;
 	}
 
 	public BuildOrderDto getData() {
