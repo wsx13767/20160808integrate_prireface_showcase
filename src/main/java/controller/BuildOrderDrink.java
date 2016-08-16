@@ -8,6 +8,15 @@ import dto.BuildOrderDrinkDto;
 @ManagedBean(name = "buildOrderDrink", eager = true)
 public class BuildOrderDrink {
 	BuildOrderDrinkDto data = new BuildOrderDrinkDto();
+	
+	public BuildOrderDrinkDto getData() {
+		return data;
+	}
+	
+	public void setData(BuildOrderDrinkDto data) {
+		this.data = data;
+	}
+	
 	public int insert(){
 		System.out.println("aa");
 		try{
@@ -51,29 +60,24 @@ public class BuildOrderDrink {
 			String itemName4=this.data.getItemName4();
 
 		if(itemName2 ==null && itemName3 == null && itemName4 ==null){
-			n = new BuildItemDAO().BuildOrderDrink(itemInformation,title,deadline,userID,itemName,itemNeedCounter,bigMoney,midMoney,smallMoney,counter,iceString,sugarString,sizeString,picture);
+			new BuildItemDAO().BuildOrderDrink(itemInformation,title,deadline,userID,itemName,itemNeedCounter,bigMoney,midMoney,smallMoney,counter,iceString,sugarString,sizeString,picture);
 		//兩樣商品
 		}else if(itemName3 == null && itemName4 ==null){   
-			n = new BuildItemDAO().BuildOrderDrink2(itemInformation,title,deadline,userID,itemName,itemNeedCounter,bigMoney,midMoney,smallMoney,counter,iceString,sugarString,sizeString,itemName2,bigMoney2,midMoney2,smallMoney2,iceString2,sugarString2,sizeString2,picture);
-				request.getRequestDispatcher("./buildPass.jsp").forward(request,response);
+			new BuildItemDAO().BuildOrderDrink2(itemInformation,title,deadline,userID,itemName,itemNeedCounter,bigMoney,midMoney,smallMoney,counter,iceString,sugarString,sizeString,itemName2,bigMoney2,midMoney2,smallMoney2,iceString2,sugarString2,sizeString2,picture);
+			
 		//三樣商品
 		}else if(itemName4 == null){
-			n = new BuildItemDAO().BuildOrderDrink3(itemInformation,title,deadline,userID,itemName,itemNeedCounter,bigMoney,midMoney,smallMoney,counter,iceString,sugarString,sizeString,itemName2,bigMoney2,midMoney2,smallMoney2,iceString2,sugarString2,sizeString2,itemName3,bigMoney3,midMoney3,smallMoney3,iceString3,sugarString3,sizeString3,picture);
-				request.getRequestDispatcher("./buildPass.jsp").forward(request,response);
+			new BuildItemDAO().BuildOrderDrink3(itemInformation,title,deadline,userID,itemName,itemNeedCounter,bigMoney,midMoney,smallMoney,counter,iceString,sugarString,sizeString,itemName2,bigMoney2,midMoney2,smallMoney2,iceString2,sugarString2,sizeString2,itemName3,bigMoney3,midMoney3,smallMoney3,iceString3,sugarString3,sizeString3,picture);
+				
 		//四樣商品
 		}else{            
-			n = new BuildItemDAO().BuildOrderDrink4(itemInformation,title,deadline,userID,itemName,itemNeedCounter,bigMoney,midMoney,smallMoney,counter,iceString,sugarString,sizeString,itemName2,bigMoney2,midMoney2,smallMoney2,iceString2,sugarString2,sizeString2,itemName3,bigMoney3,midMoney3,smallMoney3,iceString3,sugarString3,sizeString3,itemName4,bigMoney4,midMoney4,smallMoney4,iceString4,sugarString4,sizeString4,picture);
-				request.getRequestDispatcher("./buildPass.jsp").forward(request,response);
+			new BuildItemDAO().BuildOrderDrink4(itemInformation,title,deadline,userID,itemName,itemNeedCounter,bigMoney,midMoney,smallMoney,counter,iceString,sugarString,sizeString,itemName2,bigMoney2,midMoney2,smallMoney2,iceString2,sugarString2,sizeString2,itemName3,bigMoney3,midMoney3,smallMoney3,iceString3,sugarString3,sizeString3,itemName4,bigMoney4,midMoney4,smallMoney4,iceString4,sugarString4,sizeString4,picture);
+		}
 			}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
 		return 0;
 	}
 }

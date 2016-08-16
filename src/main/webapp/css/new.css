@@ -1,0 +1,11 @@
+.num{
+width:80px;
+}
+.date{
+width:240px;
+}
+#textarea{
+width:780px;
+height:250px;
+resize: none;
+}
