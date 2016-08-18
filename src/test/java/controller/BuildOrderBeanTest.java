@@ -23,8 +23,8 @@ public class BuildOrderBeanTest {
 	@Test
 	@Ignore
 	public void testAdd() throws Exception {
-		int n = component.add();
-		Assert.assertEquals(1, n);
+	/*	int n = component.add();*/
+	/*	Assert.assertEquals(1, n);*/
 	}
 
 }
