@@ -1,11 +1,10 @@
 package controller;
 
-import java.io.PrintWriter;
+
 import javax.faces.bean.ManagedBean;
 
 import dao.LoginCheckDAO;
-import dao.UserDataDAO;
-import model.UserData;
+
 
 @ManagedBean(name = "login", eager = true)
 public class Login{
@@ -16,6 +15,7 @@ public class Login{
 
 	public String check() throws Exception{
 	    	 boolean user = new LoginCheckDAO().FindIDPW(account, passwd);
+	    	 
 	    	 if(user == true){
 	    		 setMessage("Login Success");
 		    	}else{

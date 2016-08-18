@@ -32,4 +32,7 @@
         <exception-handler-factory>org.primefaces.application.exceptionhandler.PrimeExceptionHandlerFactory</exception-handler-factory>
     </factory>
     
+
+    
+    
 </faces-config>
