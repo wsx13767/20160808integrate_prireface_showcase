@@ -12,7 +12,7 @@ $(function(){
                  for(var i in data){
                         $('.powerpoint_right ul li span:odd').eq(i).html(data[i].itemInformation);
                         $('.powerpoint_right ul li a').eq(i).attr('href','/G/single.jsp?order='+parseInt(data[i].orderNumber));
-                        $('.powerpoint_big_pic ul li img').eq(i).attr('src','images/'+data[i].picture);
+                        $('.powerpoint_big_pic ul li p:graphicImage').eq(i).attr('name','images/'+data[i].picture);
                  }
             }
         });
