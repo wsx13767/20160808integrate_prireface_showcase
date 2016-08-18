@@ -11,36 +11,18 @@ import model.UserData;
 public class Login{
 	private String account;
     private String passwd;
-    
-    public void check(){
-	    // 判斷帳號密碼是否為NULL
-	    if(account==null || passwd == null)
-	    {  	sendRedirect("index.jsp");
-	    	return;
-	    }    
-	    //查詢DB是否有帳號密碼 回傳 T or F
-	    try {
-	    	
-	    	boolean n =  new LoginCheckDAO().FindIDPW(account, passwd);
-	    	if(n){
-	    		UserData userdata = new UserDataDAO().findByAccount(account);
-	    	}			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	System.out.println("success");
+    private String message;
+
+
+	public String check() throws Exception{
+	    	 boolean user = new LoginCheckDAO().FindIDPW(account, passwd);
+	    	 if(user == true){
+	    		 setMessage("Login Success");
+		    	}else{
+		    		setMessage("Login false");
+		    	}
+    	return message;
     }
-    
-    
-    
-    
-    
-    
-	private void sendRedirect(String string) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public String getAccount() {
 		return account;
@@ -53,5 +35,12 @@ public class Login{
 	}
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
+	}
+    public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 }
