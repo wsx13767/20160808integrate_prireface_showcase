@@ -8,8 +8,7 @@
 			<div class=" login-right">
 				<f:view>
 					<h:form>
-						<h:outputLabel value="#{login.message}"/>
-						<h3>登入</h3>
+						<h3>登入</h3> #{login.message}
 						<p>請輸入帳號密碼 以便進行登入</p>
 
 						<div>
@@ -20,9 +19,9 @@
 							<span>密碼</span>
 							<h:inputSecret name="passWD" id="userpw" value="#{login.passwd}"/>
 						</div>
-						<h:commandButton value="登入" class="btn btn-danger"  actionListener="#{login.check()}"/>
+						<h:commandButton value="登入" class="btn btn-danger" action="#{login.check}"/>
 						
-						<a class="forgot" href="./forgetpw.jsp"> 忘記密碼?</a>
+						<a class="forgot" href="#" > 忘記密碼?</a>
 					</h:form>
 				</f:view>
 			</div>

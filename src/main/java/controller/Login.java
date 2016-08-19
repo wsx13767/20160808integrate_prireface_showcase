@@ -1,10 +1,9 @@
 package controller;
 
 
+
 import javax.faces.bean.ManagedBean;
-
 import dao.LoginCheckDAO;
-
 
 @ManagedBean(name = "login", eager = true)
 public class Login{
@@ -12,16 +11,16 @@ public class Login{
     private String passwd;
     private String message;
 
-
 	public String check() throws Exception{
-	    	 boolean user = new LoginCheckDAO().FindIDPW(account, passwd);
-	    	 
+	    	 boolean user =new LoginCheckDAO().FindIDPW(account, passwd);	 
 	    	 if(user == true){
 	    		 setMessage("Login Success");
-		    	}else{
-		    		setMessage("Login false");
+	    		 return "/index.xhtml";
+		    	}else{	
+		    		setMessage("Login Error");
+		    		return message;
 		    	}
-    	return message;
+    	
     }
 
 	public String getAccount() {
@@ -36,11 +35,13 @@ public class Login{
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
-    public String getMessage() {
+
+	public String getMessage() {
 		return message;
 	}
 
 	public void setMessage(String message) {
 		this.message = message;
 	}
+   
 }
