@@ -40,12 +40,20 @@
 		src="http://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.min.js"></script>
 	<script src="js/messages_zh_TW.js"></script>
 	<script src="js/myjs.js"></script>
-	<ui:insert name="script"/>
+	<ui:insert name="script" />
 	<script type="application/x-javascript">
+		
+		
+		
+		
 		
 		
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
 
+	
+	
+	
+	
 	
 	</script>
 </h:head>
@@ -96,9 +104,9 @@
 
 
 					<ul class="login">
-                        <li><a href="login.xhtml"><span> </span>登入</a></li>
-                        <li ><a href="register.xhtml">註冊</a></li>
-                    </ul>
+						<li><a href="login.xhtml"><span> </span>登入</a></li>
+						<li><a href="register.xhtml">註冊</a></li>
+					</ul>
 
 
 					<a href="cash.jsp"><span> </span>儲值</a>
@@ -109,53 +117,42 @@
 			</div>
 		</div>
 	</div>
-	<div class="sub-cate">
-		<div class=" top-nav rsidebar span_1_of_left">
-			<h3 class="cate">
-				選單<span class="glyphicon glyphicon-align-justify"
-					style="position: relative; float: right; font-size: 100%; cursor: pointer;"></span>
-			</h3>
 
-			<ul class="menu">
-				<li>
-					<ul class="kid-menu">
-						<li><a href="product.jsp">加入團購</a></li>
-						<li><a href="buildItem.xhtml">發起團購</a></li>
-						<li><a href="orderManagement.jsp">管理團購</a></li>
-						<li><a href="memberManagement.jsp">會員管理</a></li>
-						<li><a href="contact.jsp">聯絡我們</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		<!--initiate accordion-->
-		<div class="chain-grid menu-chain">
-			<div id="my_favorite_latin_words"
-				style="width: 307.795px; height: 350px;"></div>
-		</div>
-		<a class="view-all all-product" href="product.jsp">查看所有商品<span>
-		</span></a>
-	</div>
 	<div class="container">
+		<div class="sub-cate">
+			<div class=" top-nav rsidebar span_1_of_left">
+				<h3 class="cate">
+					選單<span class="glyphicon glyphicon-align-justify"
+						style="position: relative; float: right; font-size: 100%; cursor: pointer;"></span>
+				</h3>
+
+				<ul class="menu">
+					<li>
+						<ul class="kid-menu">
+							<li><a href="product.jsp">加入團購</a></li>
+							<li><a href="buildItem.xhtml">發起團購</a></li>
+							<li><a href="orderManagement.jsp">管理團購</a></li>
+							<li><a href="memberManagement.jsp">會員管理</a></li>
+							<li><a href="contact.jsp">聯絡我們</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--initiate accordion-->
+			<div class="chain-grid menu-chain">
+				<div id="my_favorite_latin_words"
+					style="width: 307.795px; height: 350px;"></div>
+			</div>
+			<a class="view-all all-product" href="product.jsp">查看所有商品<span>
+			</span></a>
+		</div>
+		<ui:insert name="container" />
 		<div class="main">
 			<div class="reservation_top">
-				<div class=" contact_right">
-					<ui:insert name="container"/>
-				</div>
+				<div class=" contact_right"></div>
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
 	<div class="footer">
 		<div class="footer-top"
 			style="width: 100%; text-align: right; padding: 3px 10px 3px 0;">

@@ -17,7 +17,7 @@
 								<tr class="accountInfo">
 									<th class="accInfo_li1">帳號名稱：</th>
 									<td style="width: 2%"></td>
-									<td class="accInfo_li2"></td>
+									<td class="accInfo_li2"><h:outputText value=""/></td>
 									<td class="accInfo_li3"></td>
 								</tr>
 							</tbody>
@@ -30,7 +30,7 @@
 									<tr class="accountInfo topLine">
 										<th class="accInfo_li1">密碼：</th>
 										<td style="width: 2%"></td>
-										<td class="accInfo_li2">********</td>
+										<td class="accInfo_li2"></td>
 										<td class="accInfo_li3"><a href="#" id="Apwd">編輯</a></td>
 									</tr>
 									<!-- change PASSWORD -->
@@ -79,7 +79,7 @@
 										<td class="accInfo_li2"></td>
 										<td class="accInfo_li3"><a href="#" id="Aname">編輯</a></td>
 									</tr>
-									<!-- change NAME -->
+								<!-- 	change NAME -->
 									<tr class="hidden Aname AOths">
 										<th class="accInfo_li1"></th>
 										<td style="width: 2%"></td>
@@ -93,86 +93,69 @@
 										<td style="width: 2%"></td>
 										<td class="accInfo_li2" style="text-align: right;"><h:commandButton
 												id="sendname" value="送出" /></td>
-										<td class="accInfo_li3"></td>
+										<td class="accInfo_li3"/>
 									</tr>
 								</tbody>
 							</table>
 						</h:form>
 						<!-- PHONE -->
-						<form id="phoneform" action="./ChangePhone" method="post">
-							<input type="password" name="userAccount"
-								value="<%=nowUser.getAccount()%>" class="hidden">
+						<h:form>
+							<h:inputHidden name="userAccount" value="" class="hidden" />
 							<table style="width: 100%;">
 								<tbody>
 									<tr class="accountInfo topLine">
 										<th class="accInfo_li1">連絡電話：</th>
 										<td style="width: 2%"></td>
-										<td class="accInfo_li2"><%=phone%></td>
+										<td class="accInfo_li2"></td>
 										<td class="accInfo_li3"><a href="#" id="Aph">編輯</a></td>
 									</tr>
 									<!-- change PHONE -->
 									<tr class="hidden Aph AOths">
 										<th class="accInfo_li1"></th>
 										<td style="width: 2%"></td>
-										<td class="accInfo_li2"><pre>新號碼：<input id="Nph"
-													type="text" name="Nph">
-											
-											
-											
-											
-											
-											
-											
-											
+										<td class="accInfo_li2"><pre>新號碼：<h:inputText
+													id="Nph" name="Nph" />
 											</pre></td>
 										<td class="accInfo_li3"></td>
 									</tr>
 									<tr class="hidden Aph AOths">
 										<th class="accInfo_li1"></th>
 										<td style="width: 2%"></td>
-										<td class="accInfo_li2" style="text-align: right;"><input
-											id="sendph" type="button" value="送出"></input></td>
+										<td class="accInfo_li2" style="text-align: right;"><h:commandButton
+												id="sendph" value="送出" /></td>
 										<td class="accInfo_li3"></td>
 									</tr>
 								</tbody>
 							</table>
-						</form>
+						</h:form>
 						<!-- EMAIL -->
-						<form id="emailform" action="./ChangeEmail" method="post">
-							<input type="password" name="userAccount"
-								value="<%=nowUser.getAccount()%>" class="hidden">
+						<h:form>
+							<h:inputSecret name="userAccount" value="" class="hidden" />
 							<table style="width: 100%;">
 								<tbody>
 									<tr class="accountInfo topLine">
 										<th class="accInfo_li1">email：</th>
 										<td style="width: 2%"></td>
-										<td class="accInfo_li2"><%=nowUser.getEmail()%></td>
+										<td class="accInfo_li2"></td>
 										<td class="accInfo_li3"><a href="#" id="Amail">編輯</a></td>
 									</tr>
 									<!-- change EMAIL -->
 									<tr class="hidden Amail AOths">
 										<th class="accInfo_li1"></th>
 										<td style="width: 2%"></td>
-										<td class="accInfo_li2"><pre>新信箱：<input id="Nmail"
-													type="text" name="Nmail">
-											
-											
-											
-											
-											
-											
-											
-											
+										<td class="accInfo_li2"><pre>新信箱：<h:inputText
+													id="Nmail" name="Nmail" />
 											</pre></td>
 										<td class="accInfo_li3"></td>
 									</tr>
 									<tr class="hidden Amail AOths">
 										<th class="accInfo_li1"></th>
 										<td style="width: 2%"></td>
-										<td class="accInfo_li2" style="text-align: right;"><input
-											id="sendemail" type="button" value="送出"></input></td>
+										<td class="accInfo_li2" style="text-align: right;"><h:commandButton
+											id="sendemail"  value="送出"/></td>
 										<td class="accInfo_li3"></td>
-										<!-- line -->
+									</tr>
+									<!-- 	line -->
 									<tr class="topLine">
 										<th></th>
 										<td></td>
@@ -181,7 +164,7 @@
 									</tr>
 								</tbody>
 							</table>
-						</form>
+							</h:form>
 					</div>
 					<div class="contact-form">
 						<address class="address"></address>
