@@ -17,7 +17,7 @@ public class BuildOrderDrink {
 		this.data = data;
 	}
 	
-	public int insert(){
+	public void insert(){
 		System.out.println("aa");
 		try{
 			String itemInformation =this.data.getItemInformation();
@@ -38,9 +38,9 @@ public class BuildOrderDrink {
 			String smallMoney3 = this.data.getSmallMoney3();
 			String smallMoney4 = this.data.getSmallMoney4();
 			String counter = this.data.getCounter();
-			String counter2 = this.data.getCounter2();
+/*			String counter2 = this.data.getCounter2();
 			String counter3 = this.data.getCounter3();
-			String counter4 = this.data.getCounter4();
+			String counter4 = this.data.getCounter4();*/
 			String iceString = this.data.getIceString();
 			String iceString2 = this.data.getIceString2();
 			String iceString3 = this.data.getIceString3();
@@ -78,6 +78,6 @@ public class BuildOrderDrink {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return 0;
+		return;
 	}
 }

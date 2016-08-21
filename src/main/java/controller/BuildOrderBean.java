@@ -28,13 +28,13 @@ public class BuildOrderBean {
 			// 新增食品
 			String itemName2=this.data.getItemName2();
 			String money2=this.data.getMoney2();
-			String counter2=this.data.getCounter2();
+		/*	String counter2=this.data.getCounter2();*/
 			String itemName3=this.data.getItemName3();
 			String money3=this.data.getMoney3();
-			String counter3=this.data.getCounter3();
+		/*	String counter3=this.data.getCounter3();*/
 			String itemName4=this.data.getItemName4();
 			String money4=this.data.getMoney4();
-			String counter4=this.data.getCounter4();
+		/*	String counter4=this.data.getCounter4();*/
 			// 只有1樣商品
 			if (itemName2 == null && itemName3 == null && itemName4 == null) {
 
