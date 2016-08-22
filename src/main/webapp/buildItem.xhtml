@@ -14,9 +14,14 @@
 			<h:form>
 				<h:outputLabel value="食物訂單查詢："></h:outputLabel>
 				<h:inputText value="#{searchOrder.foodName}"></h:inputText>
-				<h:commandButton value="Submit" action="#{searchOrder.getList}" />
+				<h:commandButton value="Submit" action="#{searchOrder.searchAction}" />
+				
+				<h:dataTable value="#{searchOrder.list}" var="item">
+				<h:column>#{item.name}</h:column>
+				</h:dataTable>
+				
+				
 			</h:form>
-			#{searchOrder.list}
 		</f:view>
 
 	</ui:define>

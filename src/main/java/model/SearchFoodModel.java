@@ -1,8 +1,14 @@
 package model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class SearchFoodModel {
+public class SearchFoodModel implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6239207370431399217L;
+	
 	private String orderNumber;
 	private String remark;
 	private String iteminformation;

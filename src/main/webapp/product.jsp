@@ -76,7 +76,7 @@
 				<div id="foot_pagination" class="rt-pagination">
 					<ul class="page-link-list">
 						<li class="item_prev_page current"><a href="#"
-							rt-go-page="prev"><上一頁</a></li>
+							rt-go-page="prev">{上一頁</a></li>
 						<!-- <li class="page-to active"><a href="#" rt-go-page="to-0">1</a></li>-->
 						<li style="margin-left:5px;" class="item_next_page"><a href="#" rt-go-page="next">下一頁></a></li>
 					</ul>
