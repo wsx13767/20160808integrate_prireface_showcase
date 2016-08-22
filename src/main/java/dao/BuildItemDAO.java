@@ -1,7 +1,6 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -561,7 +560,6 @@ public class BuildItemDAO {
 			searchFoodModel.setSize(rs.getString("SIZE"));
 			return searchFoodModel;
 		}
-	
 		public List<SearchFoodModel> findBySearch(String search)throws Exception{
 			List<SearchFoodModel> list = new ArrayList<SearchFoodModel>();
 			String sql = "select a.order_number,a.remark,a.item_information,a.picture,b.NAME,b.max,b.min,b.money,b.big_price,b.mid_price,b.small_price,b.suger,b.ice,b.\"SIZE\"" +

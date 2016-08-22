@@ -12,10 +12,11 @@
 		</div>
 		<f:view>
 			<h:form>
-				<h:outputLabel value="飲料訂單查詢："></h:outputLabel>
-				<h:inputText value=""></h:inputText>
-				<h:commandButton value="Submit"></h:commandButton>
+				<h:outputLabel value="食物訂單查詢："></h:outputLabel>
+				<h:inputText value="#{searchOrder.foodName}"></h:inputText>
+				<h:commandButton value="Submit" action="#{searchOrder.getList}" />
 			</h:form>
+			#{searchOrder.list}
 		</f:view>
 
 	</ui:define>
