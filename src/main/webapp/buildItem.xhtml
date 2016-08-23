@@ -3,11 +3,15 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
+	<ui:define name="style">
+		<link href="css/new.css" rel="stylesheet" type="text/css" />
+
+	</ui:define>
 	<ui:define name="container">
 		<div>
-		<p>
-			<a href="buildItemFood.xhtml">建立食物訂單</a> 
-		</p>
+			<p>
+				<a href="buildItemFood.xhtml">建立食物訂單</a>
+			</p>
 			<a href="buildItemDrink.xhtml">建立飲料訂單</a>
 		</div>
 		<f:view>
@@ -15,14 +19,27 @@
 				<h:outputLabel value="食物訂單查詢："></h:outputLabel>
 				<h:inputText value="#{searchOrder.foodName}"></h:inputText>
 				<h:commandButton value="Submit" action="#{searchOrder.searchAction}" />
-				
-				<h:dataTable value="#{searchOrder.list}" var="item">
-				<h:column>#{item.name}</h:column>
-				<h:column>#{item.money}</h:column>
-				<h:column>#{item.iteminformation}</h:column>
+
+				<h:dataTable value="#{searchOrder.list}" var="item"
+					styleClass="itemTable" headerClass="itemTableHeader"
+					rowClasses="itemTableOddRow,itemTableEvenRow">
+
+					<h:column>
+						<f:facet name="header">Name</f:facet>
+						#{item.name}
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">Money</f:facet>
+						#{item.money}
+					</h:column>
+					<h:column>
+						<f:facet name="header">title</f:facet>
+						#{item.iteminformation}
+					</h:column>
 				</h:dataTable>
-				
-				
+
+
 			</h:form>
 		</f:view>
 
