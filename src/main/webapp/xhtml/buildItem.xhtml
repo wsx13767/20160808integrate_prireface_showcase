@@ -4,8 +4,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui" template="/WEB-INF/template.xhtml">
 	<ui:define name="style">
-		<link href="css/new.css" rel="stylesheet" type="text/css" />
-
+		<h:outputStylesheet name="css/new.css" />
 	</ui:define>
 	<ui:define name="container">
 		<div>
@@ -36,6 +35,10 @@
 					<h:column>
 						<f:facet name="header">title</f:facet>
 						#{item.iteminformation}
+					</h:column>
+					<h:column>
+						<f:facet name="header">orderNumber</f:facet>
+						<a href="demo/foodOrder.jsp?number=#{item.orderNumber}">#{item.orderNumber}</a>
 					</h:column>
 				</h:dataTable>
 

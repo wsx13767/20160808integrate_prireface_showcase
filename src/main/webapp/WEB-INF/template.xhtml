@@ -6,11 +6,19 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title>Insert title here</title>
+	
+	<h:outputStylesheet name="css/jquery-ui.min.css"/>
+	<h:outputStylesheet name="css/bootstrap.min.css"/>
+	<h:outputStylesheet name="css/bootstrap-theme.css"/>
+	<h:outputStylesheet name="css/etalage.css"/>
+	<h:outputStylesheet name="css/jqcloud.min.css"/>
+	<h:outputStylesheet name="css/style.css"/>
+	
 	<link
 		href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'
 		rel='stylesheet' type='text/css' />
-
-	<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"
+	
+	<!-- <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"
 		media="all" />
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"
 		media="all" />
@@ -19,7 +27,7 @@
 	<link href="css/etalage.css" rel="stylesheet" type="text/css"
 		media="all" />
 	<link href="css/jqcloud.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
 	<link
 		href="http://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.core.css"
 		rel="stylesheet" />
@@ -28,9 +36,13 @@
 		rel="stylesheet" />
 	<ui:insert name="style"/>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
+	
+	<h:outputScript name="js/jquery-ui.min.js"/>
+	<h:outputScript name="js/jquery.etalage.min.js"/>
+	<h:outputScript name="js/jqcloud.min.js"/>
+	<!-- <script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.etalage.min.js"></script>
-	<script src="js/jqcloud.min.js"></script>
+	<script src="js/jqcloud.min.js"></script> -->
 	<script src="http://malsup.github.io/jquery.form.js"></script>
 	<script
 		src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
@@ -38,9 +50,14 @@
 		src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
 	<script
 		src="http://cdnjs.cloudflare.com/ajax/libs/alertify.js/0.3.10/alertify.min.js"></script>
-	<script src="js/messages_zh_TW.js"></script>
-	<script src="js/myjs.js"></script>
+	<!-- <script src="js/messages_zh_TW.js"></script>
+	<script src="js/myjs.js"></script> -->
 	<ui:insert name="script" />
+	<h:outputScript name="js/messages_zh_TW.js"/>
+	<h:outputScript name="js/myjs.js"/>
+	
+	
+	
 	<script type="application/x-javascript">
 		
 		
@@ -86,8 +103,7 @@
 			<div class="container">
 				<div class="header-bottom-left">
 					<div class="logo">
-						<a href="index.xhtml"><img src="images/logo.png" alt=" "
-							class="logo_img" /></a>
+						<a href="index.xhtml"><h:graphicImage name="images/logo.png" class="logo_img"/></a>
 					</div>
 					<div class="search">
 						<h:form>
