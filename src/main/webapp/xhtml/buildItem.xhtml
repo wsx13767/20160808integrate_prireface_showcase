@@ -18,32 +18,38 @@
 				<h:outputLabel value="食物訂單查詢："></h:outputLabel>
 				<h:inputText value="#{searchOrder.foodName}"></h:inputText>
 				<h:commandButton value="Submit" action="#{searchOrder.searchAction}" />
+			</h:form>
+			<h:form>
+				<h:outputLabel value="飲料訂單查詢："></h:outputLabel>
+				<h:inputText value="#{searchOrder.drinkName}"></h:inputText>
+				<h:commandButton value="Submit"  action="#{searchOrder.searchDrinkAction}"/>
+			</h:form>
 
-				<h:dataTable value="#{searchOrder.list}" var="item"
-					styleClass="itemTable" headerClass="itemTableHeader"
-					rowClasses="itemTableOddRow,itemTableEvenRow">
 
-					<h:column>
-						<f:facet name="header">Name</f:facet>
+
+			<h:dataTable value="#{searchOrder.list}" var="item"
+				styleClass="itemTable" headerClass="itemTableHeader"
+				rowClasses="itemTableOddRow,itemTableEvenRow">
+
+				<h:column>
+					<f:facet name="header">Name</f:facet>
 						#{item.name}
 					</h:column>
 
-					<h:column>
-						<f:facet name="header">Money</f:facet>
+				<h:column>
+					<f:facet name="header">Money</f:facet>
 						#{item.money}
 					</h:column>
-					<h:column>
-						<f:facet name="header">title</f:facet>
-						#{item.iteminformation}
-					</h:column>
-					<h:column>
-						<f:facet name="header">orderNumber</f:facet>
-						<a href="demo/foodOrder.jsp?number=#{item.orderNumber}">#{item.orderNumber}</a>
-					</h:column>
-				</h:dataTable>
+				<h:column>
+					<f:facet name="header">picture</f:facet>
+					<h:graphicImage name="images/#{item.picture}" style="width:20%"></h:graphicImage>
 
-
-			</h:form>
+				</h:column>
+				<h:column>
+					<f:facet name="header">orderNumber</f:facet>
+					<a href="demo/foodOrder.jsp?number=#{item.orderNumber}">#{item.orderNumber}</a>
+				</h:column>
+			</h:dataTable>
 		</f:view>
 
 	</ui:define>

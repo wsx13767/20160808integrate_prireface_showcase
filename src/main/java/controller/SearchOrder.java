@@ -17,6 +17,7 @@ public class SearchOrder implements Serializable {
 	 */
 	private static final long serialVersionUID = -6802367492985958181L;
 	private String foodName;
+	private String drinkName;
 	private List<SearchFoodModel> list;
 	/*private BuildItemDAO dao;*/
 	/* private SearchFoodModel item; */
@@ -29,6 +30,15 @@ public class SearchOrder implements Serializable {
 			e.printStackTrace();
 		}
 		System.out.println(list.get(0).getName());
+		return;
+	}
+	public void searchDrinkAction(){
+		try {
+			list = new BuildItemDAO().findBySearch2(drinkName);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return;
 	}
 
@@ -58,5 +68,13 @@ public class SearchOrder implements Serializable {
 
 	public void setFoodName(String foodName) {
 		this.foodName = foodName;
+	}
+
+	public String getDrinkName() {
+		return drinkName;
+	}
+
+	public void setDrinkName(String drinkName) {
+		this.drinkName = drinkName;
 	}
 }

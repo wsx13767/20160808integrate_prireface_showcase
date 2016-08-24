@@ -1,0 +1,32 @@
+.num{
+width:80px;
+}
+.date{
+width:240px;
+}
+#textarea{
+width:780px;
+height:250px;
+resize: none;
+}
+.itemTable{   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.itemTableHeader{
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.itemTableOddRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFFF;	
+}
+
+.itemTableEvenRow{
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
