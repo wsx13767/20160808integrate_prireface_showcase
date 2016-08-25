@@ -223,8 +223,8 @@ $(function() {
                                        // console.log("drinkPrice["+bparse+"]["+k+"]= "+drinkPrice[bparse][k]);
                                     }             
                                 } 
-                                maxPrice2=Math.max(...allDrinkPrice);
-                                minPrice2=Math.min(...allDrinkPrice);
+                        //        maxPrice2=Math.max(...allDrinkPrice);
+                         //       minPrice2=Math.min(...allDrinkPrice);
                                 //console.log("訂單"+bparse+"maxPrice2= "+maxPrice2);
                                 //console.log("訂單"+bparse+"minPrice2= "+minPrice2);
                             }
